@@ -1,0 +1,31 @@
+{
+  "name": "quilrai-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QuilrAI take-home: MCP server, MCP gateway, PII redaction for streamed LLM responses, and a rate limited model router",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "task1:start": "tsx task1-mcp-server/src/main.ts",
+    "task2:demo": "tsx task2-mcp-gateway/src/demo.ts",
+    "task3:demo": "tsx task3-pii-guardrail/src/demo.ts",
+    "task3:start": "tsx task3-pii-guardrail/src/main.ts",
+    "task4:demo": "tsx task4-model-router/src/demo.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "jose": "^6.2.14",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
